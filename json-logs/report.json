@@ -1,0 +1,355 @@
+[
+  {
+    "description": "    I need to automate http://www.way2automation.com/angularjs-protractor/webtables/\n    So that I can show my awesome automation skills",
+    "elements": [
+      {
+        "description": "",
+        "id": "as-an-engr.-candidate;add-a-user-and-validate-the-user-that-has-been-added-to-the-table",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Add a user and Validate the user that has been added to the table",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on webtables page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2006000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on Add User button",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I enter User info on Add User form",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 960000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on save button",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Validate the user that has been added to the table",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "as-an-engr.-candidate;delete-the-said-user-from-the-table-and-validate-that-the-user-has-been-deleted.",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Delete the said user from the table and validate that the user has been deleted.",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on webtables page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 386000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "The user with username that needs to be deleted exists on the table",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click on Delete User button on the row which contains the user that needs to be deleted",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I confirm to delete the user that needs to be deleted",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "Validate the user has been deleted from the table",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "as-an-engr.-candidate",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "As an Engr. Candidate",
+    "tags": [],
+    "uri": "cypress\\e2e\\webTables.feature"
+  },
+  {
+    "description": "    I need to automate http://www.way2automation.com/angularjs-protractor/webtables/\n    So that I can show my awesome automation skills",
+    "elements": [
+      {
+        "description": "",
+        "id": "as-an-engr.-candidate;add-a-user-and-validate-the-user-that-has-been-added-to-the-table",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Add a user and Validate the user that has been added to the table",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on webtables app",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 939000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on the button: Add User",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 215000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "FirstName",
+                      "LastName",
+                      "UserName",
+                      "Password",
+                      "Role",
+                      "Email",
+                      "Mobilephone"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "TestUser1",
+                      "Perfect",
+                      "Kitty",
+                      "Secret",
+                      "Customer",
+                      "abc123@fake.com",
+                      "9876543210"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter User info from the dataTable on Add User form",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1696000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on the save button",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Validate that \"TestUser1\" has been added to the table",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "as-an-engr.-candidate;delete-the-said-user-from-the-table-and-validate-that-the-user-has-been-deleted.",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Delete the said user from the table and validate that the user has been deleted.",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on webtables app",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 376000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "The \"novak\" exists on the table",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on Delete User button on the row which contains the \"novak\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I confirm to delete the user that has to be deleted",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "Validate that the \"novak\" from the table",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "as-an-engr.-candidate",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "As an Engr. Candidate",
+    "tags": [],
+    "uri": "cypress\\e2e\\webTables_DT.feature"
+  }
+]

@@ -14,6 +14,7 @@ When('I enter User info on Add User form', () => {
     cy.fixture('user.json').then((user) => {
         cy.get('input[name=FirstName]').type(user.FirstName)
         cy.get('input[name=UserName]').type(user.UserName)
+        cy.get('input[type=radio]').first().check()  //check Company AAA of the field Customer
         cy.get('select[name=RoleId]').select(user.Role)
         cy.get('input[name=Mobilephone]').type(user.Mobilephone)
     })
