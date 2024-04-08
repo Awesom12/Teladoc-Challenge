@@ -1,5 +1,11 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
+before(() => {
+    cy.fixture('user').then((data) => {
+        userData = data
+    })
+})
+
 Given('I am on webtables page', () => {
     cy.visit('/angularjs-protractor/webtables/')
 })
@@ -11,13 +17,11 @@ When('I click on Add User button', () => {
 })
 
 When('I enter User info on Add User form', () => {
-    cy.fixture('user.json').then((user) => {
-        cy.get('input[name=FirstName]').type(user.FirstName)
-        cy.get('input[name=UserName]').type(user.UserName)
-        cy.get('input[type=radio]').first().check()  //check Company AAA of the field Customer
-        cy.get('select[name=RoleId]').select(user.Role)
-        cy.get('input[name=Mobilephone]').type(user.Mobilephone)
-    })
+    cy.get('input[name=FirstName]').type(userData.FirstName)
+    cy.get('input[name=UserName]').type(userData.UserName)
+    cy.get('input[type=radio]').first().check()  //check Company AAA of the field Customer
+    cy.get('select[name=RoleId]').select(userData.Role)
+    cy.get('input[name=Mobilephone]').type(userData.Mobilephone)
 })
 
 When('I click on save button', () => {
@@ -25,34 +29,28 @@ When('I click on save button', () => {
 })
 
 Then('Validate the user that has been added to the table', () => {
-    cy.fixture('user.json').then((user) => {
-        cy.get('.smart-table').within(() => {
-            cy.get('tbody tr')
-                .first()
-                .children('td')
-                .first()
-                .should('have.text', user.FirstName)
-        })
+    cy.get('.smart-table').within(() => {
+        cy.get('tbody tr')
+            .first()
+            .children('td')
+            .first()
+            .should('have.text', userData.FirstName)
     })
 })
 
 //Scenario 2 : Delete the said user from the table and validate that the user has been deleted
 
 When('The user with username that needs to be deleted exists on the table', () => {
-    cy.fixture('user.json').then((user) => {
-        cy.contains('td', user.deleteUser)
-            .should('exist')
-    })
+    cy.contains('td', userData.deleteUser)
+        .should('exist')
 })
 
 When('I click on Delete User button on the row which contains the user that needs to be deleted', () => {
-    cy.fixture('user.json').then((user) => {
-        cy.contains('td', user.deleteUser)
-            .parent()
-            .children()
-            .last()
-            .click()
-    })
+    cy.contains('td', userData.deleteUser)
+        .parent()
+        .children()
+        .last()
+        .click()
 })
 
 When('I confirm to delete the user that needs to be deleted', () => {
@@ -61,8 +59,6 @@ When('I confirm to delete the user that needs to be deleted', () => {
 })
 
 Then('Validate the user has been deleted from the table', () => {
-    cy.fixture('user.json').then((user) => {
-        cy.contains('td', user.deleteUser)
-            .should('not.exist')
-    })
+    cy.contains('td', userData.deleteUser)
+        .should('not.exist')
 })

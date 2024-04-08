@@ -1,0 +1,20 @@
+[
+    {
+        "FirstName": "#$%^&",
+        "UserName": "Doe",
+        "Role": "Customer",
+        "Mobilephone": "1234560789"
+    },
+    {
+        "FirstName": "John",
+        "UserName": "541202",
+        "Role": "Customer",
+        "Mobilephone": "abcdefg"
+    },
+    {
+        "FirstName": "John",
+        "UserName": "Doe",
+        "Role": "Customer",
+        "Mobilephone": "abcdefg"
+    }
+]
