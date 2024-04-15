@@ -23,6 +23,15 @@ To get started with the project, follow these steps:
 
 **IDE:** Visual Studio Code
 
+## Feature Files, Test Data and Step Definitions Files
+The cypress -> e2e folder consists of 3 feature files viz., webTables.feature, webTables_DT.feature and WT_invalid.feature.
+
+**webTables.feature:** This feature file includes Gherkin Given, When and Then style for representing the tests. The corresponding Step definitions, **webTablesSteps.js** file gets the data from the fixture file **user.json** located at cypress -> fixtures.	
+
+**webTables_DT.feature:** This feature file includes the data in **Data Table** format for adding the user and **Examples Table** for deleting the user. The corresponding Step definitions file is **webTables_DTSteps.js** that can be found at support -> step_definitions.
+
+**WT_invalid.feature:** This feature file includes the data in  **Examples Table** format for testing the scenario to **add the user** with different invalid data sets. The corresponding Step definitions file is **WT_invalidSteps.js**.
+
 ## Running the Tests
 
 **Run Tests on GUI:** Execute **'npx cypress open'** to run the Cypress tests in GUI mode.
