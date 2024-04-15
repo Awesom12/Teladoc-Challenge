@@ -46,10 +46,16 @@ When('The user with username that needs to be deleted exists on the table', () =
 })
 
 When('I click on Delete User button on the row which contains the user that needs to be deleted', () => {
-    cy.contains('td', userData.deleteUser)
-        .parent()
-        .children()
-        .last()
+    // cy.contains('td', userData.deleteUser)
+    //     .parent()
+    //     .children()
+    //     .last()
+    //     .click()
+
+    //ALTERNATIVE WAY TO FIND THE DELETE BUTTON AND CLICK ON IT - ASKED IN THE INTERVIEW
+
+    cy.contains('tr', userData.deleteUser)
+        .find('button[ng-click="delUser()"]')
         .click()
 })
 

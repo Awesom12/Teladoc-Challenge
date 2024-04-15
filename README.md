@@ -30,5 +30,5 @@ To get started with the project, follow these steps:
 **Run Tests in Headless mode:** Execute **'npx cypress run'** to run the Cypress tests in headless mode.
 
 ## Generating the Report
-**Run the command:** node reporter.js in order to find the output in cucumber-report -> index.html
+**Run the command:** 'node reporter.js' in order to find the output in cucumber-report -> index.html
 
